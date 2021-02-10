@@ -4,7 +4,6 @@ import Game from "../Game";
 import { Viewport } from "pixi-viewport";
 import { center } from "./utils";
 import Assets from "./AssetManager";
-import Sun from "../components/Sun";
 
 /**
  * Game entry point. Holds the game's viewport and responsive background
@@ -55,8 +54,6 @@ export default class GameApplication extends Application {
       // the interaction module is important for wheel to work properly when renderer.view is placed or scaled
       interaction: this.renderer.plugins.interaction,
     });
-    const sun = new Sun();
-    viewport.filters = [new filters.DisplacementFilter(sun._blast)];
 
     this.renderer.runners.resize.add({
       resize: this.onResize.bind(this),

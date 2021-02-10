@@ -1,4 +1,4 @@
-import { Sprite } from "pixi.js";
+import { Sprite, filters } from "pixi.js";
 import Scene from "./Scene";
 import gsap from "gsap";
 import Footer from "../components/Footer";
@@ -29,6 +29,10 @@ export default class Play extends Scene {
     const stars = new Stars();
     stars.z = 0;
     this.addChild(stars);
+
+    //not sure this will work
+
+    this.parent.parent.filters = [new filters.DisplacementFilter(sun._blast)];
   }
 
   /**
