@@ -33,6 +33,7 @@ export default class Splash extends Scene {
       "sun-blast": Assets.images["sun-blast"],
       "sun-glow": Assets.images["sun-glow"],
       sun: Assets.images.sun,
+      fire: Assets.images.fire,
     };
     const sounds = {};
 
